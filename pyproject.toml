@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jetson-apriltag"
+version = "0.1.0"
+description = "Subprocess-based wrapper for Team 971/766 CUDA AprilTag detector on Jetson"
+authors = [
+  { name = "FRC 9202", email = "" }
+]
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Operating System :: POSIX :: Linux",
+]
+
+[project.dependencies]
+ntcore = "*"
+
+[project.optional-dependencies]
+dev = ["black", "mypy", "pytest"]
+
+[tool.setuptools]
+packages = ["jetson_apriltag"]
+
